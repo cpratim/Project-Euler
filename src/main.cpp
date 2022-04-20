@@ -8,6 +8,7 @@
 
 #include "../problems/problem1.h"
 #include "../problems/problem2.h"
+#include "../problems/problem3.h"
 
 using namespace std;
 
@@ -21,4 +22,8 @@ int main() {
     cout << "Problem 2 Solution: ";
     auto time2 = timer(problem_2_solution, EASY_TRIALS);
     cout << "Runtime: " + to_string(time2) + " microseconds" << endl << endl;
+
+    cout << "Problem 3 Solution: ";
+    auto time3 = timer(problem_3_solution, EASY_TRIALS);
+    cout << "Runtime: " + to_string(time3) + " microseconds" << endl << endl;
 };
