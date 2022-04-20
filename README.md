@@ -6,3 +6,4 @@ The intent of this collection is not to spoil the answers but instead showcase t
 | Problem | Solution | Difficulty | Average Runtime (ms) | Code                                                                                 |
 |---------|----------|------------|----------------------|--------------------------------------------------------------------------------------|
 | 1       | 233168   | 5%         | ~ 25                 | [problem1.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem1.h) |
+| 2       | 4613732  | 5%         | ~ .01                | [problem2.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem2.h) |

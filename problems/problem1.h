@@ -24,7 +24,7 @@ int find_multiples_sum(int n, const set<int>& divisors) {
     return sum;
 }
 
-int problem_1_solution(bool log) {
+void problem_1_solution(bool log) {
     int n = 1000;
     set<int> divisors = {3, 5};
     int sum = find_multiples_sum(n, divisors);
@@ -32,3 +32,4 @@ int problem_1_solution(bool log) {
 }
 
 #endif //PROJECT_EULER_PROBLEM1_H
+
