@@ -21,9 +21,4 @@ bool is_prime(int n) {
     return true;
 }
 
-int* generate_primes(int n) {
-    static int primes[10];
-    return primes;
-}
-
 #endif //CEULER_PRIME_LIB_H
