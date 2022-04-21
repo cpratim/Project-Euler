@@ -6,6 +6,8 @@
 #define CEULER_PRINT_LIB_H
 
 #include "iostream"
+#include "vector"
+
 using namespace std;
 
 template <typename T>
