@@ -1,5 +1,5 @@
 # Project-Euler
-Collection of solved Project Euler problems in C++ (https://projecteuler.net/).
+Collection of solved Project Euler problems in C++ (https://projecteuler.net/) by Pratim Chowdhary and Karun Ram.
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
