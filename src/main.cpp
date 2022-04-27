@@ -9,6 +9,7 @@
 #include "../problems/problem1.h"
 #include "../problems/problem2.h"
 #include "../problems/problem3.h"
+#include "../problems/problem4.h"
 #include "../problems/problem71.h"
 
 using namespace std;
@@ -29,6 +30,10 @@ int main() {
     cout << "Problem 3 Solution: ";
     auto time3 = timer(problem_3_solution, EASY_TRIALS);
     cout << "Runtime: " + to_string(time3) + " microseconds" << endl << endl;
+
+    cout << "Problem 4 Solution: ";
+    auto time4 = timer(problem_4_solution, EASY_TRIALS);
+    cout << "Runtime: " + to_string(time4) + " microseconds" << endl << endl;
 
     cout << "Problem 71 Solution: ";
     auto time71 = timer(problem_71_solution, MEDIUM_TRIALS);
