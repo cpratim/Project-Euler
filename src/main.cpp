@@ -14,13 +14,14 @@
 #include "../problems/problem25.h"
 #include "../problems/problem71.h"
 #include "../problems/problem94.h"
+#include "../problems/problem122.h"
 #include "../problems/problem187.h"
 
 using namespace std;
 
 int EASY_TRIALS = 100;
 int MEDIUM_TRIALS = 50;
-int HARD_TRIALS = 1;
+int HARD_TRIALS = 2;
 
 
 int main() {
@@ -55,6 +56,10 @@ int main() {
     cout << "Problem 94 Solution: ";
     auto time94 = timer(problem_94_solution, MEDIUM_TRIALS);
     cout << "Runtime: " + to_string(time94) + " microseconds" << endl << endl;
+
+    cout << "Problem 122 Solution: ";
+    auto time122 = timer(problem_122_solution, HARD_TRIALS);
+    cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
 
     cout << "Problem 187 Solution: ";
     auto time187 = timer(problem_187_solution, HARD_TRIALS);
