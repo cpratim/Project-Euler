@@ -19,7 +19,8 @@ struct QueueElement {
 };
 
 int find_min_multiplications(int n) {
-    if (n == 1) return 0;
+    if (n == 1)
+        return 0;
     queue<QueueElement> queue;
     unordered_map<int, int> map;
     QueueElement init = {1, unordered_set<int>({1}), 0};
@@ -31,8 +32,9 @@ int find_min_multiplications(int n) {
         for (itr = element.found.begin(); itr != element.found.end(); itr++) {
             int inc_sum = *itr + element.sum;
             int inc_count = element.count + 1;
-            if (inc_sum == n) return inc_count;
-            if (inc_sum < n and (map.find(inc_sum) == map.end() or inc_count <= map.find(inc_sum)->second)) {
+            if (inc_sum == n)
+                return inc_count;
+            if (inc_sum < n and (!map.contains(inc_sum) or inc_count <= map.find(inc_sum)->second)) {
                 map.insert({inc_sum, inc_count});
                 unordered_set<int> inc_found = element.found;
                 inc_found.insert(inc_sum);

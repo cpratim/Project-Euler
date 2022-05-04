@@ -11,7 +11,7 @@ using namespace std;
 
 double timer(auto (*func), int trials) {
     double total_time = 0;
-    for (int i = 0; i <= trials; i++) {
+    for (int i = 0; i < trials; i++) {
         auto start = chrono::high_resolution_clock::now();
         func(i == trials);
         auto stop = chrono::high_resolution_clock::now();
