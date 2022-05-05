@@ -18,12 +18,10 @@ struct QueueElement {
     int count;
 };
 
-unordered_map<int, int> find_min_multiplications(int n) {
+void find_min_multiplications(int n, unordered_map<int, int> &map) {
     if (n == 1)
-        return {};
+        return;
     queue<QueueElement> queue;
-    unordered_map<int, int> map;
-
     queue.push({1, unordered_set<int>({1}), 0});
     while (not queue.empty()) {
         QueueElement element = queue.front();
@@ -32,9 +30,9 @@ unordered_map<int, int> find_min_multiplications(int n) {
         for (itr = element.found.begin(); itr != element.found.end(); itr++) {
             int inc_sum = *itr + element.sum;
             int inc_count = element.count + 1;
-            if (inc_sum == n){
+            if (inc_sum == n) {
                 map[inc_sum] = inc_count;
-                return map;
+                return;
             }
             if (inc_sum < n and (not map.contains(inc_sum) or inc_count <= map.find(inc_sum)->second)) {
                 map.insert({inc_sum, inc_count});
@@ -45,7 +43,6 @@ unordered_map<int, int> find_min_multiplications(int n) {
             }
         }
     }
-    return {};
 }
 
 void problem_122_solution(bool log) {
@@ -54,13 +51,8 @@ void problem_122_solution(bool log) {
     int sum = 0;
     unordered_map<int, int> map;
     while (map.size() != n - 1) {
-        if (not map.contains(track)){
-            unordered_map<int, int> sub_map = find_min_multiplications(track);
-            for (auto & itr : sub_map) {
-                if (!map.contains(itr.first))
-                    map.insert({itr.first, itr.second});
-            }
-        }
+        if (not map.contains(track))
+            find_min_multiplications(track, map);
         track--;
     }
     for (auto & itr : map) {
