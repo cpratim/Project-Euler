@@ -18,23 +18,25 @@ struct QueueElement {
     int count;
 };
 
-int find_min_multiplications(int n) {
+unordered_map<int, int> find_min_multiplications(int n) {
     if (n == 1)
-        return 0;
+        return {};
     queue<QueueElement> queue;
     unordered_map<int, int> map;
-    QueueElement init = {1, unordered_set<int>({1}), 0};
-    queue.push(init);
-    while (!queue.empty()) {
+
+    queue.push({1, unordered_set<int>({1}), 0});
+    while (not queue.empty()) {
         QueueElement element = queue.front();
         queue.pop();
         unordered_set<int>::iterator itr;
         for (itr = element.found.begin(); itr != element.found.end(); itr++) {
             int inc_sum = *itr + element.sum;
             int inc_count = element.count + 1;
-            if (inc_sum == n)
-                return inc_count;
-            if (inc_sum < n and (!map.contains(inc_sum) or inc_count <= map.find(inc_sum)->second)) {
+            if (inc_sum == n){
+                map[inc_sum] = inc_count;
+                return map;
+            }
+            if (inc_sum < n and (not map.contains(inc_sum) or inc_count <= map.find(inc_sum)->second)) {
                 map.insert({inc_sum, inc_count});
                 unordered_set<int> inc_found = element.found;
                 inc_found.insert(inc_sum);
@@ -43,13 +45,26 @@ int find_min_multiplications(int n) {
             }
         }
     }
-    return 0;
+    return {};
 }
 
 void problem_122_solution(bool log) {
+    int n = 200;
+    int track = n;
     int sum = 0;
-    for (int i = 1; i <= 200; i++) {
-        sum += find_min_multiplications(i);
+    unordered_map<int, int> map;
+    while (map.size() != n - 1) {
+        if (not map.contains(track)){
+            unordered_map<int, int> sub_map = find_min_multiplications(track);
+            for (auto & itr : sub_map) {
+                if (!map.contains(itr.first))
+                    map.insert({itr.first, itr.second});
+            }
+        }
+        track--;
+    }
+    for (auto & itr : map) {
+        sum += itr.second;
     }
     if (log) cout << sum << endl;
 }

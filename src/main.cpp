@@ -21,6 +21,7 @@ using namespace std;
 
 int EASY_TRIALS = 100;
 int MEDIUM_TRIALS = 50;
+int INTERMEDIATE_TRIALS = 10;
 int HARD_TRIALS = 2;
 
 
@@ -58,7 +59,7 @@ int main() {
     cout << "Runtime: " + to_string(time94) + " microseconds" << endl << endl;
 
     cout << "Problem 122 Solution: ";
-    auto time122 = timer(problem_122_solution, HARD_TRIALS);
+    auto time122 = timer(problem_122_solution, INTERMEDIATE_TRIALS);
     cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
 
     cout << "Problem 187 Solution: ";
