@@ -3,8 +3,8 @@ Collection of solved Project Euler problems in C++ (https://projecteuler.net/) b
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
-Highest difficulty solved: 50%
-
+**Highest difficulty solved: 50%
+**
 | Problem                                                               | Number | Solution  | Difficulty | Runtime (us) | Code                                                                                     |
 |-----------------------------------------------------------------------|--------|-----------|------------|--------------|------------------------------------------------------------------------------------------|
 | [Multiples of 3 or 5](https://projecteuler.net/problem=1)             | 1      | 233168    | 5%         | ~ 25         | [problem1.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem1.h)     |
