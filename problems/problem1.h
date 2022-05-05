@@ -1,5 +1,5 @@
 //
-// Created by pratim on 4/19/22.
+// Created on 4/19/22.
 //
 
 #ifndef PROJECT_EULER_PROBLEM1_H
