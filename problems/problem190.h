@@ -22,6 +22,6 @@ void problem_190_solution(bool log) {
         }
         sum += int(prod);
     }
-    if (log) std::cout << "Sum: " << sum << std::endl;
+    if (log) std::cout << sum << std::endl;
 }
 #endif //PROJECT_EULER_PROBLEM190_H

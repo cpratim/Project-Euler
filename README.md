@@ -3,6 +3,8 @@ Collection of solved Project Euler problems in C++ (https://projecteuler.net/) b
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
+Highest difficulty solved: 50%
+
 | Problem                                                               | Number | Solution  | Difficulty | Runtime (us) | Code                                                                                     |
 |-----------------------------------------------------------------------|--------|-----------|------------|--------------|------------------------------------------------------------------------------------------|
 | [Multiples of 3 or 5](https://projecteuler.net/problem=1)             | 1      | 233168    | 5%         | ~ 25         | [problem1.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem1.h)     |
@@ -13,7 +15,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [1000-digit Fibonacci number](https://projecteuler.net/problem=25)    | 25     | 4782      | 5%         | ~ .02        | [problem25.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem25.h)   |
 | [Ordered fractions](https://projecteuler.net/problem=71)              | 71     | 428570    | 10%        | ~ 5700       | [problem71.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem71.h)   |
 | [Almost equilateral triangles](https://projecteuler.net/problem=94)   | 94     | 518408346 | 35%        | ~ 0.04       | [problem94.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem94.h)   |
-| [Efficient exponentiation](https://projecteuler.net/problem=122)      | 122    | 1582      | 40%        | ~ 132500     | [problem122.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem122.h) |
+| [Efficient exponentiation](https://projecteuler.net/problem=122)      | 122    | 1582      | 40%        | ~ 3000000    | [problem122.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem122.h) |
 | [Semiprimes](https://projecteuler.net/problem=187)                    | 187    | 17427258  | 25%        | ~ 5940000    | [problem187.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem187.h) |
 | [Maximising a weighted product](https://projecteuler.net/problem=190) | 190    | 371048281 | 50%        | ~ 1          | [problem190.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem190.h) |
 
