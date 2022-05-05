@@ -16,6 +16,7 @@
 #include "../problems/problem94.h"
 #include "../problems/problem122.h"
 #include "../problems/problem187.h"
+#include "../problems/problem190.h"
 
 using namespace std;
 
@@ -58,11 +59,15 @@ int main() {
     auto time94 = timer(problem_94_solution, MEDIUM_TRIALS);
     cout << "Runtime: " + to_string(time94) + " microseconds" << endl << endl;
 
-    cout << "Problem 122 Solution: ";
-    auto time122 = timer(problem_122_solution, INTERMEDIATE_TRIALS);
-    cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
+//    cout << "Problem 122 Solution: ";
+//    auto time122 = timer(problem_122_solution, INTERMEDIATE_TRIALS);
+//    cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
+//
+//    cout << "Problem 187 Solution: ";
+//    auto time187 = timer(problem_187_solution, HARD_TRIALS);
+//    cout << "Runtime: " + to_string(time187) + " microseconds" << endl << endl;
 
-    cout << "Problem 187 Solution: ";
-    auto time187 = timer(problem_187_solution, HARD_TRIALS);
-    cout << "Runtime: " + to_string(time187) + " microseconds" << endl << endl;
+    cout << "Problem 190 Solution: ";
+    auto time190 = timer(problem_190_solution, EASY_TRIALS);
+    cout << "Runtime: " + to_string(time190) + " microseconds" << endl << endl;
 };
