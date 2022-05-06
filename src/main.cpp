@@ -60,7 +60,7 @@ int main() {
     cout << "Runtime: " + to_string(time94) + " microseconds" << endl << endl;
 
     cout << "Problem 122 Solution: ";
-    auto time122 = timer(problem_122_solution, INTERMEDIATE_TRIALS);
+    auto time122 = timer(problem_122_solution, HARD_TRIALS);
     cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
 
     cout << "Problem 187 Solution: ";

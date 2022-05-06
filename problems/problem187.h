@@ -1,5 +1,5 @@
 //
-// Created on 5/2/22.
+// Created by Karun Ram, Pratim Chowdhary on 5/2/22.
 //
 
 #ifndef PROJECT_EULER_PROBLEM187_H
