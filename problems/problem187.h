@@ -23,7 +23,7 @@ std::vector<long> gen_primes(int n) {
     return primes;
 }
 
-int problem_187_solution(bool log) {
+void problem_187_solution(bool log) {
     long n = 100000000;
     std::vector<long> primes = gen_primes(n);
     std::vector<long> primes2 = gen_primes((int)std::sqrt(n));

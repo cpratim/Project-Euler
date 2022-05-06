@@ -4,7 +4,11 @@
 
 #include "iostream"
 #include "string"
+#include "unordered_map"
+#include "vector"
+
 #include "../include/timer.h"
+#include "../include/string_lib.h"
 
 #include "../problems/problem1.h"
 #include "../problems/problem2.h"
@@ -23,66 +27,76 @@
 
 using namespace std;
 
-int EASY_TRIALS = 100;
-int MEDIUM_TRIALS = 50;
-int INTERMEDIATE_TRIALS = 10;
-int HARD_TRIALS = 2;
+unordered_map<int, void (*)(bool)> problem_map {
+        {1, problem_1_solution},
+        {2, problem_2_solution},
+        {3, problem_3_solution},
+        {4, problem_4_solution},
+        {5, problem_5_solution},
+        {8, problem_8_solution},
+        {25, problem_25_solution},
+        {71, problem_71_solution},
+        {73, problem_73_solution},
+        {94, problem_94_solution},
+        {99, problem_99_solution},
+        {122, problem_122_solution},
+        {187, problem_187_solution},
+        {190, problem_190_solution}
+};
 
+void run_problem(int problem_number, int trials) {
+    cout << "Problem " + to_string(problem_number) + " Solution: ";
+    auto time = timer(problem_map.find(problem_number)->second, trials);
+    cout << "Average Runtime: " + to_string(time) + " microseconds" << endl << endl;
+}
 
 int main() {
-    cout << "Problem 1 Solution: ";
-    auto time1 = timer(problem_1_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time1) + " microseconds" << endl << endl;
 
-    cout << "Problem 2 Solution: ";
-    auto time2 = timer(problem_2_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time2) + " microseconds" << endl << endl;
+    vector<int> sorted_problems;
+    for (auto it: problem_map) {
+        sorted_problems.push_back(it.first);
+    }
+    sort(sorted_problems.begin(), sorted_problems.end());
 
-    cout << "Problem 3 Solution: ";
-    auto time3 = timer(problem_3_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time3) + " microseconds" << endl << endl;
-
-    cout << "Problem 4 Solution: ";
-    auto time4 = timer(problem_4_solution, MEDIUM_TRIALS);
-    cout << "Runtime: " + to_string(time4) + " microseconds" << endl << endl;
-
-    cout << "Problem 5 Solution: ";
-    auto time5 = timer(problem_5_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time5) + " microseconds" << endl << endl;
-
-    cout << "Problem 8 Solution: ";
-    auto time8 = timer(problem_8_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time8) + " microseconds" << endl << endl;
-
-    cout << "Problem 25 Solution: ";
-    auto time6 = timer(problem_25_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time6) + " microseconds" << endl << endl;
-
-    cout << "Problem 71 Solution: ";
-    auto time71 = timer(problem_71_solution, MEDIUM_TRIALS);
-    cout << "Runtime: " + to_string(time71) + " microseconds" << endl << endl;
-
-    cout << "Problem 73 Solution: ";
-    auto time73 = timer(problem_73_solution, HARD_TRIALS);
-    cout << "Runtime: " + to_string(time73) + " microseconds" << endl << endl;
-
-    cout << "Problem 94 Solution: ";
-    auto time94 = timer(problem_94_solution, MEDIUM_TRIALS);
-    cout << "Runtime: " + to_string(time94) + " microseconds" << endl << endl;
-
-    cout << "Problem 99 Solution: ";
-    auto time99 = timer(problem_99_solution, MEDIUM_TRIALS);
-    cout << "Runtime: " + to_string(time99) + " microseconds" << endl << endl;
-
-    cout << "Problem 122 Solution: ";
-    auto time122 = timer(problem_122_solution, HARD_TRIALS);
-    cout << "Runtime: " + to_string(time122) + " microseconds" << endl << endl;
-
-    cout << "Problem 187 Solution: ";
-    auto time187 = timer(problem_187_solution, HARD_TRIALS);
-    cout << "Runtime: " + to_string(time187) + " microseconds" << endl << endl;
-
-    cout << "Problem 190 Solution: ";
-    auto time190 = timer(problem_190_solution, EASY_TRIALS);
-    cout << "Runtime: " + to_string(time190) + " microseconds" << endl << endl;
+    cout << "Welcome to the Project Euler Shell!" << endl << endl;
+    cout << "Commands:" << endl;
+    cout << "list -> list all solved problems" << endl;
+    cout << "quit -> quit shell" << endl;
+    cout << "all -> Run all problems (1 trial each)" << endl;
+    cout << "run [num] [trials] -> Run Problem [num] with [trials] Trials" << endl << endl;
+    bool quit = false;
+    while (not quit) {
+        cout << "> ";
+        string input;
+        getline(cin, input);
+        vector<string> splits = split(input, ' ');
+        string command = splits[0];
+        if (command == "list") {
+            cout << "Solved Problems:";
+            for (auto problem : sorted_problems) {
+                cout << ", " + to_string(problem);
+            }
+            cout << endl << endl;
+        } else if (command == "quit") {
+            quit = true;
+        } else if (command == "run") {
+            int problem_number = stoi(splits[1]);
+            if (not problem_map.contains(problem_number)) {
+                cout << "Problem " + to_string(problem_number) + " is not solved yet!" << endl << endl;
+            } else {
+                try {
+                    int trials = splits.size() == 2 ? 1 : stoi(splits[2]);
+                    cout << "Running Problem " + to_string(problem_number) + " with " + to_string(trials) + " trials" << endl;
+                    run_problem(problem_number, trials);
+                } catch (const std::invalid_argument &e) {
+                    cout << "Invalid argument!" << endl << endl;
+                }
+            }
+        } else if (command == "all") {
+            for (auto problem : sorted_problems) {
+                run_problem(problem, 1);}
+        } else {
+            cout << "Invalid Command" << endl;
+        }
+    }
 };
