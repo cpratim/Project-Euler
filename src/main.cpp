@@ -11,6 +11,7 @@
 #include "../problems/problem3.h"
 #include "../problems/problem4.h"
 #include "../problems/problem5.h"
+#include "../problems/problem8.h"
 #include "../problems/problem25.h"
 #include "../problems/problem71.h"
 #include "../problems/problem73.h"
@@ -48,6 +49,10 @@ int main() {
     cout << "Problem 5 Solution: ";
     auto time5 = timer(problem_5_solution, EASY_TRIALS);
     cout << "Runtime: " + to_string(time5) + " microseconds" << endl << endl;
+
+    cout << "Problem 8 Solution: ";
+    auto time8 = timer(problem_8_solution, EASY_TRIALS);
+    cout << "Runtime: " + to_string(time8) + " microseconds" << endl << endl;
 
     cout << "Problem 25 Solution: ";
     auto time6 = timer(problem_25_solution, EASY_TRIALS);
