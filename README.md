@@ -10,7 +10,7 @@ Contributors:
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
-**Highest difficulty solved \[55%\]: [Searching a triangular array for a sub-triangle having minimum-sum](https://projecteuler.net/problem=150))**
+**Highest difficulty solved** \[55%\]: [Searching a triangular array for a sub-triangle having minimum-sum](https://projecteuler.net/problem=150)
 
 | Problem                                                                                                    | Number | Solution    | Difficulty | Runtime (us) | Code                                                                                     |
 |------------------------------------------------------------------------------------------------------------|--------|-------------|------------|--------------|------------------------------------------------------------------------------------------|
