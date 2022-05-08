@@ -24,4 +24,4 @@ add_executable(
         problems/problem73.h
         problems/problem8.h
         include/string_lib.h
-        problems/problem102.h problems/problem69.h)
+        problems/problem102.h problems/problem69.h problems/problem150.h)
