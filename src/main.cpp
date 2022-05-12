@@ -23,6 +23,7 @@
 #include "../problems/problem73.h"
 #include "../problems/problem76.h"
 #include "../problems/problem94.h"
+#include "../problems/problem98.h"
 #include "../problems/problem99.h"
 #include "../problems/problem102.h"
 #include "../problems/problem122.h"
@@ -46,6 +47,7 @@ unordered_map<int, void (*)(bool)> problem_map {
         {73, problem_73_solution},
         {76, problem_76_solution},
         {94, problem_94_solution},
+        {98, problem_98_solution},
         {99, problem_99_solution},
         {102, problem_102_solution},
         {122, problem_122_solution},

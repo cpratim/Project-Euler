@@ -19,8 +19,8 @@ def gen_squares():
         n -= 1
     return M
 
-SQ = gen_squares()
-print('generated')
+# SQ = gen_squares()
+# print('generated')
 
 def anagramic_map(word, n):
     m = {}
@@ -72,10 +72,10 @@ for w in words:
     PM[p].append(w)
 
 
-with open('N.json', 'r') as f:
-    N = json.load(f)
-
-patterns = list(N.keys())
+# with open('N.json', 'r') as f:
+#     N = json.load(f)
+#
+# patterns = list(N.keys())
 
 def solve():
     word_len = 14
@@ -97,8 +97,16 @@ def solve():
         word_len -= 1
     return mx
 
+n = 10000000 - 1
+i = n ** 2
+j = (n-2) ** 2
+print(i)
+print(j)
+print(i - j)
+print(pattern(str(i)))
+print(pattern(str(j)))
 
-print(solve())
+# print(solve())
 # S = set()
 # for w in words:
 #     S.add(pattern(w))
