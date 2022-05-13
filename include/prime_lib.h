@@ -4,7 +4,11 @@
 
 #ifndef CEULER_PRIME_LIB_H
 #define CEULER_PRIME_LIB_H
+
 #include "cmath"
+#include "vector"
+
+using namespace std;
 
 bool is_prime(int n) {
     if (n == 1 || n == 2) {
@@ -19,6 +23,33 @@ bool is_prime(int n) {
         }
     }
     return true;
+}
+
+vector<int> sieve(int N)
+{
+    vector<int> primes;
+    vector<long> isprime (N, true);
+    vector<long> SPF (N);
+
+    isprime[0] = isprime[1] = false ;
+    for (long long int i=2; i<N ; i++)
+    {
+        if (isprime[i])
+        {
+            primes.push_back(i);
+            SPF[i] = i;
+        }
+
+        for (long int j = 0;
+             j < primes.size() &&
+             i*primes[j] < N && primes[j] <= SPF[i];
+             j++)
+        {
+            isprime[i*primes[j]]=false;
+            SPF[i*primes[j]] = primes[j] ;
+        }
+    }
+    return primes;
 }
 
 #endif //CEULER_PRIME_LIB_H
