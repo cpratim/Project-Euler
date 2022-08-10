@@ -7,6 +7,7 @@ Contributors:
 - [Karun Ram](https://github.com/KamiV2)
 - [Sonia Bendre](https://github.com/SoniaBendre)
 - [Allison Zhuang](https://github.com/allisonzhuang)
+- [Alice Chen](https://github.com/azycn)
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
@@ -19,6 +20,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [Largest prime factor](https://projecteuler.net/problem=3)                                                 | 3      | 5%         | ~ .6         | [problem3.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem3.h)     |
 | [Largest palindrome product](https://projecteuler.net/problem=4)                                           | 4      | 5%         | ~ 8000       | [problem4.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem4.h)     |
 | [Smallest multiple](https://projecteuler.net/problem=5)                                                    | 5      | 5%         | ~ .01        | [problem5.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem5.h)     |
+| [Sum square difference](https://projecteuler.net/problem=6)                                                | 6      | 5%         | ~ .7         | [problem6.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem6.h)     |
 | [Largest product in a series](https://projecteuler.net/problem=8)                                          | 8      | 5%         | ~ 10         | [problem8.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem8.h)     |
 | [1000-digit Fibonacci number](https://projecteuler.net/problem=25)                                         | 25     | 5%         | ~ .02        | [problem25.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem25.h)   |
 | [Cubic permutations](https://projecteuler.net/problem=62)                                                  | 62     | 15%        | ~ 15900      | [problem62.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem62.h)   |
