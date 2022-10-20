@@ -7,6 +7,7 @@ Contributors:
 - [Karun Ram](https://github.com/KamiV2)
 - [Sonia Bendre](https://github.com/SoniaBendre)
 - [Allison Zhuang](https://github.com/allisonzhuang)
+- [Alice Chen](https://github.com/azycn)
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
@@ -31,6 +32,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [Anagramic squares](https://projecteuler.net/problem=98)                                                   | 98     | 35%        | ~ 553000     | [problem98.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem98.h)   |
 | [Largest exponential](https://projecteuler.net/problem=99)                                                 | 99     | 10%        | ~ 500        | [problem99.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem99.h)   |
 | [Triangle containment](https://projecteuler.net/problem=102)                                               | 102    | 15%        | ~ 3550       | [problem102.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem102.h) |
+| [Triangle containment](https://projecteuler.net/problem=119)                                               | 119    | 30%        | ~ 250        | [problem119.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem119.h) |
 | [Efficient exponentiation](https://projecteuler.net/problem=122)                                           | 122    | 40%        | ~ 300000     | [problem122.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem122.h) |
 | [Searching a triangular array for a sub-triangle having minimum-sum](https://projecteuler.net/problem=150) | 150    | 55%        | ~ 455650     | [problem150.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem150.h) |
 | [Semiprimes](https://projecteuler.net/problem=187)                                                         | 187    | 25%        | ~ 3100000    | [problem187.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem187.h) |
