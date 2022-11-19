@@ -33,6 +33,7 @@
 #include "../problems/problem150.h"
 #include "../problems/problem187.h"
 #include "../problems/problem190.h"
+#include "../problems/problem204.h"
 
 using namespace std;
 
@@ -59,7 +60,8 @@ unordered_map<int, void (*)(bool)> problem_map {
         {122, problem_122_solution},
         {150, problem_150_solution},
         {187, problem_187_solution},
-        {190, problem_190_solution}
+        {190, problem_190_solution},
+        {204, problem_204_solution},
 };
 
 void run_problem(int problem_number, int trials) {
