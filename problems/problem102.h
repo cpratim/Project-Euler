@@ -48,7 +48,7 @@ bool contains_origin(vector<int> points) {
 }
 
 void problem_102_solution(bool log) {
-    string filename = "../misc/p102_triangles.txt";
+    string filename = "misc/p102_triangles.txt";
     ifstream file(filename);
     string line;
     int count = 0;

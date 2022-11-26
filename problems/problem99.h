@@ -36,7 +36,7 @@ int get_max_exp_index(string filename) {
 }
 
 void problem_99_solution(bool log) {
-    string filename = "../misc/p099_base_exp.txt";
+    string filename = "misc/p099_base_exp.txt";
     int max_index = get_max_exp_index(filename);
     if (log) cout << max_index << endl;
 }

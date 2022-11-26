@@ -136,7 +136,7 @@ long switch_digits(const string& word1, const string& word2, long square) {
 void problem_98_solution(bool log) {
     unordered_map<string, long> pattern_map;
     unordered_set<long> pattern_set;
-    vector<tuple<string, string>> anagram_pairs = get_anagram_pairs("../misc/p098_words.txt",
+    vector<tuple<string, string>> anagram_pairs = get_anagram_pairs("misc/p098_words.txt",
                                                                     pattern_map,
                                                                     pattern_set);
     unordered_map<long, unordered_set<long>> square_map;
