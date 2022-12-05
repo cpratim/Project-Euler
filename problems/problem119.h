@@ -2,6 +2,9 @@
 // Pratim Chowdhary on 10/20/22.
 //
 
+#ifndef PROJECT_EULER_PROBLEM119_H
+#define PROJECT_EULER_PROBLEM119_H
+
 #include <iostream>
 #include <vector>
 
@@ -29,3 +32,5 @@ void problem_119_solution(bool log) {
     sort(v.begin(), v.end());
     if (log) cout << v[29] << endl;
 }
+
+#endif //PROJECT_EULER_PROBLEM119_H
