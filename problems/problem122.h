@@ -34,7 +34,7 @@ void find_min_multiplications(int n, unordered_map<int, int> &map) {
                 map[inc_sum] = inc_count;
                 return;
             }
-            if (inc_sum < n and (not map.contains(inc_sum) or inc_count <= map.find(inc_sum)->second)) {
+            if (inc_sum < n and (map.find(inc_sum) == map.end() or inc_count <= map.find(inc_sum)->second)) {
                 map.insert({inc_sum, inc_count});
                 unordered_set<int> inc_found = element.found;
                 inc_found.insert(inc_sum);

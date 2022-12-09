@@ -43,6 +43,8 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [Digit power sum](https://projecteuler.net/problem=119)                                                    | 119    | 30%        | ~ 250        | [problem119.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem119.h) |
 | [Disc game prize fund](https://projecteuler.net/problem=121)                                               | 121    | 35%        | ~ 1500       | [problem121.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem121.h) |
 | [Efficient exponentiation](https://projecteuler.net/problem=122)                                           | 122    | 40%        | ~ 300000     | [problem122.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem122.h) |
+| [Perfect Square Collection](https://projecteuler.net/problem=142)                                          | 142    | 45%        | ~ 200000     | [problem142.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem142.h) |
+
 | [Searching a triangular array for a sub-triangle having minimum-sum](https://projecteuler.net/problem=150) | 150    | 55%        | ~ 455650     | [problem150.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem150.h) |
 | [Semiprimes](https://projecteuler.net/problem=187)                                                         | 187    | 25%        | ~ 3100000    | [problem187.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem187.h) |
 | [Maximising a weighted product](https://projecteuler.net/problem=190)                                      | 190    | 50%        | ~ 1          | [problem190.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem190.h) |
