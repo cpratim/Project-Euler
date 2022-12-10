@@ -44,7 +44,6 @@ long S(int i, string s, char d, string pattern, string digits) {
     return sum;
 }
 
-
 void problem_111_solution(bool log) {
     int N = 10;
     unordered_map<int, vector<string>> combination_map;
@@ -55,7 +54,6 @@ void problem_111_solution(bool log) {
     for (char d: digits) {
         long sum = 0;
         for (int i = 10; i >= 0; i--) {
-            // cout << i << endl;
             if (sum > 0) break;
             for (string pattern: combination_map[i]) {
                 if (pattern[0] == '1' && d == '0') continue;
