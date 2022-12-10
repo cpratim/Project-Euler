@@ -52,7 +52,7 @@ a = '123456789'
 M = [False] * len(a)
 P = []
 C = {}
-products = set()
+prods = set()
 permutations(a, 0, '', M, P)
 
 def n_sets(p, prod=1):

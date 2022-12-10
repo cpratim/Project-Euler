@@ -28,6 +28,35 @@ bool is_prime(int n) {
     return true;
 }
 
+bool is_prime_long(long n) {
+    if (n == 1) return false;
+    if (n == 2) return true;
+    if (n % 2 == 0) return false;
+    for (long i = 3; i < floor(sqrt(n)) + 1; i=i+2) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool is_prime_cache(long n, unordered_map<long, bool> &prime_map) {
+    if (prime_map.find(n) != prime_map.end()) {
+        return prime_map[n];
+    }
+    if (n == 1) return false;
+    if (n == 2) return true;
+    if (n % 2 == 0) return false;
+    for (int i = 3; i * i <= n; i += 2) {
+        if (n % i == 0) {
+            prime_map[n] = false;
+            return false;
+        }
+    }
+    prime_map[n] = true;
+    return true;
+}
+
 vector<int> sieve(int N)
 {
     vector<int> primes;
