@@ -1,4 +1,5 @@
 # Project-Euler
+
 Collection of solved Project Euler problems in C++ (https://projecteuler.net/).
 
 Contributors:
@@ -8,6 +9,7 @@ Contributors:
 - [Sonia Bendre](https://github.com/SoniaBendre)
 - [Allison Zhuang](https://github.com/allisonzhuang)
 - [Alice Chen](https://github.com/azycn)
+- [Annie Tang](https://github.com/annieetang)
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
@@ -28,6 +30,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [Ordered fractions](https://projecteuler.net/problem=71)                                                   | 71     | 10%        | ~ 6000       | [problem71.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem71.h)   |
 | [Counting fractions in a range](https://projecteuler.net/problem=73)                                       | 73     | 15%        | ~ 60e5       | [problem73.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem73.h)   |
 | [Counting summations](https://projecteuler.net/problem=76)                                                 | 76     | 10%        | ~ 80         | [problem76.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem76.h)   |
+| [Path sum: four ways](https://projecteuler.net/problem=83)                                                 | 83     | 25%        | ~ 30000      | [problem83.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem83.h)   |
 | [Roman numerals](https://projecteuler.net/problem=89)                                                      | 89     | 20%        | ~ 10000      | [problem89.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem89.h)   |
 | [Almost equilateral triangles](https://projecteuler.net/problem=94)                                        | 94     | 35%        | ~ 1          | [problem94.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem94.h)   |
 | [Amicable chains](https://projecteuler.net/problem=95)                                                     | 95     | 30%        | ~ 10e5       | [problem95.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem95.h)   |
