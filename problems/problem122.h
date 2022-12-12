@@ -51,7 +51,7 @@ void problem_122_solution(bool log) {
     int sum = 0;
     unordered_map<int, int> map;
     while (map.size() != n - 1) {
-        if (not map.contains(track))
+        if (map.find(track) == map.end())
             find_min_multiplications(track, map);
         track--;
     }

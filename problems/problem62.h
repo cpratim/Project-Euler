@@ -28,7 +28,7 @@ void problem_62_solution(bool log) {
         long cube = (long) pow(n, 3);
 
         key = hash_permutation(cube);
-        if (not map.contains(key)) {
+        if (map.find(key) == map.end()) {
             map.insert({key, 0});
             cubes.insert({key, cube});
         }

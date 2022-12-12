@@ -18,7 +18,7 @@ long find_num_fractions(int d_max, int d_floor, int d_ceil) {
         double f_d = (double) d;
         for (int n = floor(f_d / d_floor); n < floor(f_d / d_ceil); n++) {
             double frac = (double) n / f_d;
-            if (not fraction_set.contains(frac)) {
+            if (fraction_set.find(frac) == fraction_set.end()) {
                 fraction_set.insert(frac);
                 total += 1;
             }

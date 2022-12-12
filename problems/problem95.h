@@ -20,7 +20,7 @@ void generate_factor_map(unordered_map<int, unordered_set<int>>& factor_map,
                          vector<int>& primes,
                          int N) {
     for (int n = 2; n < N; n++) {
-        if (prime_set.contains(n)) {
+        if (prime_set.find(n) != prime_set.end()) {
             factor_map[n] = unordered_set<int> {1, n};
             factor_sum_map[n] = 1;
         } else {
@@ -38,7 +38,7 @@ void generate_factor_map(unordered_map<int, unordered_set<int>>& factor_map,
             unordered_set<int> factor_set = factor_map[last];
             for (int factor: factor_map[n / prime_factor]) {
                 int new_factor = factor * prime_factor;
-                if (not factor_set.contains(new_factor)) {
+                if (factor_set.find(new_factor) == factor_set.end()) {
                     factor_set.insert(new_factor);
                     if (new_factor != n)
                         factor_sum += new_factor;
@@ -57,14 +57,14 @@ void generate_factor_map(unordered_map<int, unordered_set<int>>& factor_map,
 }
 
 int find_chain(int N, unordered_map<int, int>& factor_sum_map, unordered_map<int, int>& chain_map) {
-    if (chain_map.contains(N))
+    if (chain_map.find(N) != chain_map.end())
         return chain_map[N];
     unordered_map<int, int> index_map;
     int index = 0;
     int n = N;
     index_map[n] = 0;
     n = factor_sum_map[n];
-    while (not index_map.contains(n)) {
+    while (index_map.find(n) == index_map.end()) {
         if (n == 1 or n == -1) {
             for (auto itr: index_map) {
                 chain_map[itr.second] = -1;

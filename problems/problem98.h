@@ -40,7 +40,7 @@ long get_pattern_word(const string& word) {
     int size = word.size();
     for (int j = size - 1; j >= 0; j--) {
         char c = word[j];
-        if (not map.contains(c)) {
+        if (map.find(c) == map.end()) {
             map[c] = index;
             index += 1;
         }
@@ -57,7 +57,7 @@ long get_pattern_int(long n) {
     while (n > 0) {
 
         int d = n % 10;
-        if (not map.contains(d)) {
+        if (map.find(d) == map.end()) {
             map[d] = index;
             index += 1;
         }
@@ -106,8 +106,8 @@ void create_square_map(unordered_map<long, unordered_set<long>>& square_map,
         long square = n * n;
         int n_digits = ceil(log10(square));
         long pattern = get_pattern_int(square);
-        if (pattern_set.contains(pattern)) {
-            if (not square_map.contains(pattern))
+        if (pattern_set.find(pattern) != pattern_set.end()) {
+            if (square_map.find(pattern) == square_map.end())
                 square_map[pattern] = unordered_set<long> {};
             square_map[pattern].insert(square);
         }
@@ -122,7 +122,7 @@ long switch_digits(const string& word1, const string& word2, long square) {
     for (int i = size-1; i >= 0; i--) {
         int d = square % 10;
         char c = word1[i];
-        if (not char_map.contains(c))
+        if (char_map.find(c) == char_map.end())
             char_map[c] = d;
         square = floor(square / 10);
     }
@@ -149,14 +149,14 @@ void problem_98_solution(bool log) {
         long pattern2 = pattern_map[word2];
         for (long square: square_map[pattern1]) {
             long switched = switch_digits(word1, word2, square);
-            if (square_map[pattern2].contains(switched)) {
+            if (square_map[pattern2].find(switched) != square_map[pattern2].end()) {
                 if (switched > largest)
                     largest = switched;
             }
         }
         for (long square: square_map[pattern2]) {
             long switched = switch_digits(word2, word1, square);
-            if (square_map[pattern1].contains(switched)) {
+            if (square_map[pattern1].find(switched) != square_map[pattern1].end()) {
                 if (switched > largest)
                     largest = switched;
             }

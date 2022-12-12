@@ -21,10 +21,10 @@
 using namespace std;
 
 void add_edge(unordered_map<int, vector<int>>& graph, int u, int v) {
-    if (not graph.contains(u)) {
+    if (graph.find(u) == graph.end()) {
         graph[u] = vector<int>();
     }
-    if (not graph.contains(v)) {
+    if (graph.find(v) == graph.end()) {
         graph[v] = vector<int>();
     }
     graph[u].push_back(v);

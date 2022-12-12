@@ -139,7 +139,7 @@ int main() {
             quit = true;
         } else if (command == "run") {
             int problem_number = stoi(splits[1]);
-            if (not problem_map.contains(problem_number)) {
+            if (problem_map.find(problem_number) == problem_map.end()) {
                 cout << "Problem " + to_string(problem_number) + " is not solved yet!" << endl << endl;
             } else {
                 try {
@@ -152,7 +152,8 @@ int main() {
             }
         } else if (command == "all") {
             for (auto problem : sorted_problems) {
-                run_problem(problem, 1);}
+                run_problem(problem, 1);
+            }
         } else {
             cout << "Invalid Command" << endl;
         }
