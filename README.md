@@ -10,6 +10,7 @@ Contributors:
 - [Allison Zhuang](https://github.com/allisonzhuang)
 - [Alice Chen](https://github.com/azycn)
 - [Annie Tang](https://github.com/annieetang)
+- [Jason Guo] (https://github.com/echefcy)
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
@@ -36,6 +37,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 | [Amicable chains](https://projecteuler.net/problem=95)                                                     | 95     | 30%        | ~ 10e5       | [problem95.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem95.h)   |
 | [Anagramic squares](https://projecteuler.net/problem=98)                                                   | 98     | 35%        | ~ 600000     | [problem98.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem98.h)   |
 | [Largest exponential](https://projecteuler.net/problem=99)                                                 | 99     | 10%        | ~ 500        | [problem99.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem99.h)   |
+| [Arranged probability](https://projecteuler.net/problem=100)                                               | 100    | 30%        | ~ 100        | [problem101.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem100.h) |
 | [Optimum polynomial](https://projecteuler.net/problem=101)                                                 | 101    | 35%        | ~ 200000     | [problem101.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem101.h) |
 | [Triangle containment](https://projecteuler.net/problem=102)                                               | 102    | 15%        | ~ 4000       | [problem102.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem102.h) |
 | [Special subset sums: testing](https://projecteuler.net/problem=105)                                       | 105    | 45%        | ~ 10000      | [problem105.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem105.h) |
