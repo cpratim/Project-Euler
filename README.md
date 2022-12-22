@@ -10,7 +10,7 @@ Contributors:
 - [Allison Zhuang](https://github.com/allisonzhuang)
 - [Alice Chen](https://github.com/azycn)
 - [Annie Tang](https://github.com/annieetang)
-- [Jason Guo] (https://github.com/echefcy)
+- [Jason Guo](https://github.com/echefcy)
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
