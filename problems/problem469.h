@@ -5,6 +5,8 @@
 #ifndef PROJECT_EULER_PROBLEM469_H
 #define PROJECT_EULER_PROBLEM469_H
 
+#include <iomanip>
+
 using namespace std;
 
 double cache469[10000] = {0};

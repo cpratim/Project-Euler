@@ -25,8 +25,8 @@ void problem_265_solution(bool log){
     seen.insert(a);
     // std::cout << a << "\n";
 
-    unsigned long solution = 0;
-    unsigned long *sol = &solution;
+    unsigned long long solution = 0;
+    unsigned long long *sol = &solution;
 
     auto splice = [](std::bitset<S> source, int left){
         auto ret = std::bitset<N>();
@@ -37,7 +37,7 @@ void problem_265_solution(bool log){
 
     std::function<void(std::bitset<S>, int)> backtrack;
 
-    backtrack = [&seen, &sol, &splice, &backtrack](std::bitset<S> bitarray, int idx){
+    backtrack = [&seen, sol, &splice, &backtrack](std::bitset<S> bitarray, int idx){
         if (idx == S - N + 1) {
             for (int i = 0; i < N - 1; i++){
                 auto a = std::bitset<N>();
@@ -46,14 +46,21 @@ void problem_265_solution(bool log){
                     a[j - idx - i] = bitarray[j];
                     l++;
                 }
-                for (int j = 0; j < i + 1; i++)
+                for (int j = 0; j < i + 1; j++)
                     a[l + j] = bitarray[j];
 
                 if (seen.find(a) != seen.end()){
                     return;
                 }
             }
-            sol += bitarray.to_ulong();
+            
+            auto reverse = bitarray;
+            for(std::size_t i = 0; i < S/2; i++) {
+                bool t = reverse[i];
+                reverse[i] = reverse[S-i-1];
+                reverse[S-i-1] = t;
+            }
+            *sol += reverse.to_ullong();
             return;
         }
 
