@@ -6,7 +6,6 @@
 #define PROJECT_EULER_PROBLEM265_H
 
 #include <iostream>
-#include <vector>
 #include <unordered_set>
 #include <bitset>
 #include <cmath>
