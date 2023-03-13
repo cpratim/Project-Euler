@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/cpratim/Documents/projects/Project-Euler/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -std=gnu++20 -o CMakeFiles/Project-Euler.dir/src/main.cpp.o -c /Users/cpratim/Documents/projects/Project-Euler/src/main.cpp",
+  "file": "/Users/cpratim/Documents/projects/Project-Euler/src/main.cpp"
+}
+]

@@ -23,11 +23,11 @@ long multi_coef(int n, vector<int> & k) {
     return num / den;
 }
 
-void generate_distribution(int i, int n, int s, int l, umap<int, int> & roll, umap<int, double> &dist) {
+void generate_distribution(int i, int n, int s, int l, umap<int, int> & roll, umap<int, double> & dist) {
     if (i == n) {
         vector<int> k;
         long t = 0;
-        for (const auto & [v, f]: roll) {
+        for (auto [v, f]: roll) {
             if (f == 0) continue;
             k.push_back(f);
             t += f * v;
@@ -48,8 +48,8 @@ void problem_205_solution(bool log) {
     generate_distribution(0, 9, 4, 1, roll, peter);
     generate_distribution(0, 6, 6, 1, roll, colin);
     double p = 0;
-    for (const auto & [v, f]: peter) {
-        for (const auto & [v2, f2]: colin) {
+    for (const auto [v, f]: peter) {
+        for (const auto [v2, f2]: colin) {
             if (v > v2) p += f * f2;
         }
     }
