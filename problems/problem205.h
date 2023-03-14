@@ -12,49 +12,46 @@
 
 using namespace std;
 
-template<typename T, typename U> using umap = unordered_map<T, U>;
-
-long multi_coef(int n, vector<int> & k) {
-    long num = factorial(n);
-    long den = 1;
-    for (int i = 0; i < k.size(); i++) {
-        den *= factorial(k[i]);
+long multinomial_coefficient(int n, std::vector<int> &k) {
+    long result = factorial(n);
+    for (auto i : k) {
+        result /= factorial(i);
     }
-    return num / den;
+    return result;
 }
 
-void generate_distribution(int i, int n, int s, int l, umap<int, int> & roll, umap<int, double> & dist) {
+void generate_rolls(int i, int n, int s, int l, vector<int> &roll, unordered_map<int, double> & dist) {
     if (i == n) {
-        vector<int> k;
-        long t = 0;
-        for (auto [v, f]: roll) {
-            if (f == 0) continue;
-            k.push_back(f);
-            t += f * v;
+        int sum = 0;
+        for (int j = 1; j <= s; j++) {
+            sum += j * roll[j];
         }
-        dist[t] += (multi_coef(n, k) * (1.0 / pow(s, n)));
+        dist[sum] += multinomial_coefficient(n, roll) * (1.0 / pow(s, n));
         return;
     }
     for (int j = l; j <= s; j++) {
         roll[j]++;
-        generate_distribution(i + 1, n, s, l, roll, dist);
+        generate_rolls(i + 1, n, s, j, roll, dist);
         roll[j]--;
     }
 }
 
 void problem_205_solution(bool log) {
-    umap<int, double> peter, colin;
-    umap<int, int> roll;
-    generate_distribution(0, 9, 4, 1, roll, peter);
-    generate_distribution(0, 6, 6, 1, roll, colin);
-    double p = 0;
-    for (const auto [v, f]: peter) {
-        for (const auto [v2, f2]: colin) {
-            if (v > v2) p += f * f2;
+    unordered_map<int, double> peter_dist;
+    unordered_map<int, double> colin_dist;
+    vector<int> roll(7, 0);
+    generate_rolls(0, 9, 4, 1, roll, peter_dist);
+    roll = vector<int>(7, 0);
+    generate_rolls(0, 6, 6, 1, roll, colin_dist);
+    double peter_prob = 0;
+    for (auto i : peter_dist) {
+        for (auto j : colin_dist) {
+            if (i.first > j.first) {
+                peter_prob += i.second * j.second;
+            }
         }
     }
-    if (log) cout << p << endl;
+    if (log) cout << "Problem 205 Solution: " << peter_prob << endl;
 }
-
 
 #endif //PROJECT_EULER_PROBLEM205_H
