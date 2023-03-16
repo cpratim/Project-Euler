@@ -18,9 +18,9 @@ void step(matrix<double> & chain, int N) {
     for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) {
         if (chain[i][j] == 0) continue;
         int around = (int) (i > 0) + (int) (i < N - 1) + (int) (j > 0) + (int) (j < N - 1);
-        if (i > 0) next[i - 1][j] += chain[i][j] / around;
+        if (i > 0)     next[i - 1][j] += chain[i][j] / around;
         if (i < N - 1) next[i + 1][j] += chain[i][j] / around;
-        if (j > 0) next[i][j - 1] += chain[i][j] / around;
+        if (j > 0)     next[i][j - 1] += chain[i][j] / around;
         if (j < N - 1) next[i][j + 1] += chain[i][j] / around;
     }
     chain = next;
