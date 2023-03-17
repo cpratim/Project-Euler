@@ -19,7 +19,7 @@ void problem_117_solution(bool log) {
         if (i + 3 <= N) dp[i] += dp[i+3];
         if (i + 4 <= N) dp[i] += dp[i+4];
     }
-    if (log) cout << "Problem 117 Solution: " << dp[0] << endl;
+    if (log) cout << dp[0] << endl;
 }
 
 #endif //PROJECT_EULER_PROBLEM117_H
