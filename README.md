@@ -14,6 +14,14 @@ Contributors:
 
 The intent of this collection is not to provide answers to the problems. It solely intends to showcase solution techniques for educational value.
 
+## How to use
+
+Run and execute with following command:
+
+```bash
+wget https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh && chmod +x euler.sh && ./euler.sh
+```
+
 **Highest difficulty solved** \[60%\]: [Flea Circus](https://projecteuler.net/problem=213)
 
 | Problem                                                                                                    | Number | Difficulty | Runtime (us) | Code                                                                                     |
