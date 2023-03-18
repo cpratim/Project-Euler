@@ -19,9 +19,7 @@ The intent of this collection is not to provide answers to the problems. It sole
 Run and execute with following command:
 
 ```bash
-wget https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh 
-&& chmod +x euler.sh 
-&& ./euler.sh
+curl https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh && chmod +x euler.sh && ./euler.sh
 ```
 
 **Highest difficulty solved** \[60%\]: [Flea Circus](https://projecteuler.net/problem=213)
