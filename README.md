@@ -24,7 +24,7 @@ curl -O https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh \
 && ./euler.sh
 ```
 
-**Highest difficulty solved** \[60%\]: [Flea Circus](https://projecteuler.net/problem=213)
+**Highest difficulty solved** \[65%\]: [The Race](https://projecteuler.net/problem=232) and [The Chase](https://projecteuler.net/problem=227)
 
 | Problem                                                                                                    | Number | Difficulty | Runtime (us) | Code                                                                                     |
 |------------------------------------------------------------------------------------------------------------|--------|------------|--------------|------------------------------------------------------------------------------------------|
@@ -49,7 +49,7 @@ curl -O https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh \
 | [Anagramic squares](https://projecteuler.net/problem=98)                                                   | 98     | 35%        | ~ 600000     | [problem98.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem98.h)   |
 | [Largest exponential](https://projecteuler.net/problem=99)                                                 | 99     | 10%        | ~ 500        | [problem99.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem99.h)   |
 | [Arranged probability](https://projecteuler.net/problem=100)                                               | 100    | 30%        | ~ 100        | [problem101.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem100.h) |
-| [Optimum polynomial](https://projecteuler.net/problem=101)                                                 | 101    | 35%        | ~ 200000     | [problem101.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem101.h) |
+| [Optimum polynomial](https://projecteuler.net/problem=101)                                                 | 101    | 35%        | ~ 200000     | [problem101.py](https://github.com/cpratim/Project-Euler/blob/main/tests/problem101.py) |
 | [Triangle containment](https://projecteuler.net/problem=102)                                               | 102    | 15%        | ~ 4000       | [problem102.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem102.h) |
 | [Special subset sums: testing](https://projecteuler.net/problem=105)                                       | 105    | 45%        | ~ 10000      | [problem105.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem105.h) |
 | [Minimal network](https://projecteuler.net/problem=107)                                                    | 107    | 35%        | ~ 20000      | [problem107.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem107.h) |
@@ -79,8 +79,10 @@ curl -O https://raw.githubusercontent.com/cpratim/Project-Euler/main/euler.sh \
 | [Generalised Hamming Numbers](https://projecteuler.net/problem=204)                                        | 204    | 30%        | ~ 20e5       | [problem204.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem204.h) |
 | [Dice Game](https://projecteuler.net/problem=205)                                                          | 205    | 15%        | ~ 3000       | [problem205.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem205.h) |
 | [Flea Circus](https://projecteuler.net/problem=213)                                                        | 213    | 60%        | ~ 800000     | [problem213.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem213.h) |
-| [Top Dice](https://projecteuler.net/problem=240)                                                        | 240    | 60%        | ~ 2500000    | [problem240.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem240.h) |
+| [The Chase](https://projecteuler.net/problem=227)                                                          | 227    | 65%        | ~ 200000     | [problem227.py](https://github.com/cpratim/Project-Euler/blob/main/tests/problem227.py) |
+| [The Race](https://projecteuler.net/problem=232)                                                           | 232    | 65%        | ~ 15000      | [problem232.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem232.h) |
+| [Top Dice](https://projecteuler.net/problem=240)                                                           | 240    | 60%        | ~ 25e5    | [problem240.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem240.h) |
 | [Binary Circles](https://projecteuler.net/problem=265)                                                     | 265    | 40%        | ~ 150000       | [problem265.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem265.h) |
-| [Billionaire](https://projecteuler.net/problem=267)                                                     | 267    | 50%        | ~ 1000       | [problem267.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem267.h) |
+| [Billionaire](https://projecteuler.net/problem=267)                                                        | 267    | 50%        | ~ 1000       | [problem267.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem267.h) |
 | [Prime Frog](https://projecteuler.net/problem=329)                                                         | 329    | 25%        | ~ 2000       | [problem329.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem329.h) |
 | [Empty chairs](https://projecteuler.net/problem=469)                                                       | 469    | 40%        | ~ 200        | [problem469.h](https://github.com/cpratim/Project-Euler/blob/main/problems/problem469.h) |
