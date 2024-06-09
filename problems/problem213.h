@@ -44,7 +44,7 @@ void problem_213_solution(bool log) {
     for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) {
         result += DP[i][j];
     }
-    if (log) cout << "Problem 213 Solution: " << result << endl;
+    if (log) cout << result << endl;
     
 }
 

@@ -43,4 +43,4 @@ for i in range(1, D+1):
     for j in range(i):
         t += (i+1)**j * s[j]
 
-print(floor(t))
+print("Problem 101 Solution: ", floor(t))

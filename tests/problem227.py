@@ -62,7 +62,7 @@ def get_walk_times(C):
             if p == 0:
                 continue
             matrix[i][p-1] = c
-
+    
     ans = np.matmul(np.linalg.inv(matrix), np.ones(R))
     return ans * 36
 
@@ -71,4 +71,4 @@ def get_expected_time(C):
     walk_times = get_walk_times(C)
     return walk_times[C // 2 - 1]
   
-print(get_expected_time(100))
+print("Problem 227 Solution:", get_expected_time(100))

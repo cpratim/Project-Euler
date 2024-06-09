@@ -6,6 +6,7 @@
 #include "string"
 #include "unordered_map"
 #include "vector"
+#include "unordered_set"
 
 #include "../include/timer.h"
 #include "../include/string_lib.h"
@@ -68,6 +69,8 @@
 #include "../problems/problem267.h"
 #include "../problems/problem329.h"
 #include "../problems/problem469.h"
+#include "../problems/problem481.h"
+#include "../problems/problem683.h"
 
 using namespace std;
 
@@ -130,10 +133,15 @@ unordered_map<int, void (*)(bool)> problem_map {
     {267, problem_267_solution},
     {329, problem_329_solution},
     {469, problem_469_solution},
+    {481, problem_481_solution},
+    {683, problem_683_solution},
 };
 
+unordered_set<int> python_problems = {101, 227, 481, 683};
+
 void run_problem(int problem_number, int trials) {
-    cout << "Problem " + to_string(problem_number) + " Solution: ";
+    if (python_problems.find(problem_number) == python_problems.end()) 
+        cout << "Problem " + to_string(problem_number) + " Solution: ";
     auto time = timer(problem_map.find(problem_number)->second, trials);
     cout << "Average Runtime: " + to_string(time) + " microseconds" << endl << endl;
 }

@@ -6,18 +6,22 @@ from random import randint
 def d(x, y, C):
   return min(abs(x - y), C - abs(x - y))
 
+
 def l(x, C):
     if x - 1 < 0:
         return C - 1
     return x - 1
+
 
 def r(x, C):
     if x + 1 > C - 1:
         return 0
     return x + 1
 
+
 def s(x, C):
     return x
+
 
 def get_equation(x, y, C):
 
@@ -61,7 +65,7 @@ def get_walk_times(C):
 
     R = (C // 2) * 2
     matrix = np.zeros((R, R))
-  
+
     for i, e in enumerate(EQS):
         for n in range(0, 2):
             for (c, p) in e[n]:
@@ -88,4 +92,4 @@ def get_expected_time(C):
         ans += EV / (c * c)
     return ans
 
-print(get_expected_time(50))
+print('Problem 683 Solution:', get_expected_time(50))
