@@ -71,6 +71,7 @@
 #include "../problems/problem469.h"
 #include "../problems/problem481.h"
 #include "../problems/problem683.h"
+#include "../problems/problem918.h"
 
 using namespace std;
 
@@ -135,6 +136,7 @@ unordered_map<int, void (*)(bool)> problem_map {
     {469, problem_469_solution},
     {481, problem_481_solution},
     {683, problem_683_solution},
+    {918, problem_918_solution},
 };
 
 unordered_set<int> python_problems = {101, 227, 481, 683};
